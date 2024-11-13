@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>L1T08</title>
+  </head>
+  <body>
+  <p>L1T08</p>
+  
+
+
+  <script type="text/javascript" src="digitalHideSeek.js"></script>
+
+
+/// FIND SUM OF ARRAY ///
+//we potentially have multiple options to build this function. i.e for loops
+//generally the array reduce() method is used for this purpose.
+//set variable const as we will pass a single value of the sum.
+
+const arrayOfNumbers = [5,3,10];
+
+//callback function for reduce method, accepts 4 parameters, 2 compulsory,2 optional.
+function findSum(total, currentValue) {
+  return total += currentValue;
+}
+
+//callback function findSum to execute function above
+function results(totalSum) {
+  console.log(arrayOfNumbers.reduce(findSum));
+}
+
+results()
+
+//========================================================================================================================================================================================================================================================
+
+let firstNum = 5; 
+let secondNum = 10; 
+
+function subtractNumbers(findSum, secondNum) {
+    return firstNum - secondNum;
+}
+
+console.log(subtractNumbers(firstNum, secondNum));
+
+let firstNumMultiply = 2; 
+let secondNumMultiply = 10; 
+
+function multiplyNumbers(firstNumMultiply, secondNumMultiply) {
+    return firstNumMultiply * secondNumMultiply;
+}
+
+console.log(multiplyNumbers(firstNumMultiply, secondNumMultiply));
+
+
+let firstNumDiv = 4; 
+let secondNumDiv = 0; 
+
+function divNumbers(firstNumDiv, secondNumDiv) {
+
+  //deal with output Infinity
+  if (secondNumDiv === 0) {
+    console.log("CANNOT DIVIDE BY 0");
+  } 
+    return firstNumDiv / secondNumDiv;
+}
+console.log(divNumbers(firstNumDiv, secondNumDiv));
+
+//========================================================================================================================================================================================================================================================
+
+  </script>
+  </body>
+</html>
